@@ -1,15 +1,37 @@
-interface TweetProps{
-  user: string
-  children: string
-  likes?: number
-}
+import { ArrowsClockwise, ChatCircle, Heart } from 'phosphor-react';
+import './Tweet.css';
 
-export function Tweet(props: TweetProps){
+export function Tweet(){
   return(
-    <div className="tweet">
-      <strong>{props.user}</strong>
-      <h1>{props.children}</h1>
-      <button>Like{props.likes ?? 0}</button>
-    </div>
+    <a href="#" className="tweet">
+      <img src="https://github.com/juancassiano.png" alt="Juan Cassiano" />
+
+      <div className="tweet-content">
+        <div className="tweet-content header">
+          <strong>Juan Cassiano</strong>
+          <span>@jcassiano</span>
+        </div>
+
+        <p>Estou iniciando meus estudos em React através dessa aplicação, por meio
+          da masterclass da Rocketseat! Super recomendo.
+        </p>
+
+        <div className="tweet-content-footer">
+          <button type="button">
+            <ChatCircle />
+            20
+          </button>
+
+          <button type="button">
+            <ArrowsClockwise />
+            20
+          </button>
+          <button type="button">
+            <Heart />
+            20
+          </button>
+        </div>
+      </div>
+    </a>
   )
 }
