@@ -1,9 +1,14 @@
 import { ArrowsClockwise, ChatCircle, Heart } from 'phosphor-react';
+import { Link } from 'react-router-dom';
 import './Tweet.css';
 
-export function Tweet(){
+interface TweetProps{
+  content:string;
+}
+
+export function Tweet(props: TweetProps){
   return(
-    <a href="#" className="tweet">
+    <Link to="/status" className="tweet">
       <img src="https://github.com/juancassiano.png" alt="Juan Cassiano" />
 
       <div className="tweet-content">
@@ -12,9 +17,7 @@ export function Tweet(){
           <span>@jcassiano</span>
         </div>
 
-        <p>Estou iniciando meus estudos em React através dessa aplicação, por meio
-          da masterclass da Rocketseat! Super recomendo.
-        </p>
+        <p>{props.content}</p>
 
         <div className="tweet-content-footer">
           <button type="button">
@@ -32,6 +35,6 @@ export function Tweet(){
           </button>
         </div>
       </div>
-    </a>
+    </Link>
   )
 }
