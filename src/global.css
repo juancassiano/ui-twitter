@@ -25,5 +25,8 @@ a{
   color: inherit;
 }
 
-
-
+@media (max-width: 780px) {
+  .layout{
+    grid-template-columns: 80px 1fr;
+  }
+}

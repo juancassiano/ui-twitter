@@ -1,6 +1,7 @@
 .layout{
   margin: o auto;
   max-width: 1000px;
+  min-height: 100vh;
 
   display: grid;
   grid-template-columns: 300px 1fr;
